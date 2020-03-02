@@ -1,4 +1,3 @@
-
 const qsort = (array) => {
 	if (array.length == undefined || array.length==0) {
 		return [];
@@ -26,9 +25,18 @@ exports.max = function max (array) {
   let array1=(qsort(array));
   return array1[array1.length-1];
 }
-/*
-exports.avg = function avg (array) {
-  for(let i=0;i<array.length;i++){
 
+exports.avg = function avg (array) {
+  let sum=0;
+  if (array.length == undefined ) {
+		return [];
+	} else if (array.length==1){
+return array;
+  } else {
+    for(let i=0;i<array.length;i++){
+      sum+=array[i];
+    }
   }
-}*/
+  let avg=sum/(array.length);
+  return avg;
+}
