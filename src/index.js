@@ -29,7 +29,7 @@ exports.max = function max (array) {
 exports.avg = function avg (array) {
   let sum=0;
   if (array.length == undefined ) {
-		return [];
+		return 0;
 	} else if (array.length==1){
 return array;
   } else {
